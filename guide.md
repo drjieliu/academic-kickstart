@@ -34,12 +34,17 @@ git clone https://github.com/drjieliu/academic-kickstart.git
 cd academic-kickstart
 git submodule update --init --recursive
 ```
+2. 添加网站代码库为submodule
 
-1. 在代码库根目录运行之前下载的hugo工具，并执行hugo server，可以在本地实时预览最新修改.
+```bash
+git submodule add -f -b master https://github.com/drjieliu/drjieliu.github.io.git public
+```
 
-2. 本地浏览器打开http://localhost:1313预览网站内容
+3. 在代码库根目录运行之前下载的hugo工具，并执行hugo server，可以在本地实时预览最新修改.
 
-3. 修改后完成后在根目录执行hugo命令手动生成网站内容, public目录为hugo工具生成的网站静态文件
+4. 本地浏览器打开http://localhost:1313预览网站内容
+
+5. 修改后完成后在根目录执行hugo命令手动生成网站内容, public目录为hugo工具生成的网站静态文件
 ```bash
 hugo
 cd public
@@ -49,7 +54,7 @@ git push origin master
 cd ..
 ```
 
-4. 修改后提交网站元内容
+6. 修改后提交网站元内容
 ```bash
 git add .
 git commit -m "modify content"
